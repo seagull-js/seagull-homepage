@@ -2,6 +2,7 @@ import { Page } from "@seagull-js/seagull";
 import * as React from "react";
 import { Button, Jumbotron } from "react-bootstrap";
 import { Link } from 'react-router-dom'
+import HeaderNavigation from "../components/HeaderNavigation";
 
 // the (stateful) component for the page with type checking
 export default class HelloPage extends Page<{}, {}> {
@@ -14,7 +15,9 @@ export default class HelloPage extends Page<{}, {}> {
       margin: '15 0 15 0'
     }
     return <div>
-        <img src="/assets/seagull-logo.png" style={ eyeCatcherStyle } />
+      <HeaderNavigation />
+      <div className="container">
+        <img src="/assets/seagull-logo.png" style={eyeCatcherStyle} />
         <Jumbotron>
           <p>
             Featherweight Zero-Config Typesafe Isomorphic Cloud Framework.
@@ -31,6 +34,7 @@ export default class HelloPage extends Page<{}, {}> {
             </Link>
           </p>
         </Jumbotron>
-      </div>;
+      </div>
+    </div>
   }
 }

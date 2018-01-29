@@ -1,6 +1,5 @@
 import * as React from "react";
 import {} from "react-bootstrap";
-import HeaderNavigation from './components/HeaderNavigation'
 
 // this is what your index.html looks like
 export default function Layout({ children }) {
@@ -10,8 +9,7 @@ export default function Layout({ children }) {
         <link rel="stylesheet" href="/assets/bootstrap.min.css" />
       </head>
       <body>
-        <HeaderNavigation />
-        <div id="root" className="container">
+        <div id="root">
           {children}
         </div>
         <script src="/assets/bundle.js" />
