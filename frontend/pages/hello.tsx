@@ -8,9 +8,14 @@ export default class HelloPage extends Page<{}, {}> {
   path = "/";
 
   render() {
+    const eyeCatcherStyle = {
+      maxWidth: '100%',
+      display: 'block',
+      margin: '15 0 15 0'
+    }
     return <div>
+        <img src="/assets/seagull-logo.png" style={ eyeCatcherStyle } />
         <Jumbotron>
-          <h1>Seagull Framework Logo</h1>
           <p>
             Featherweight Zero-Config Typesafe Isomorphic Cloud Framework.
           </p>
