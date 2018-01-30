@@ -8,7 +8,7 @@ export default class QuickstartPage extends Page<{}, {}> {
 
   render() {
     return (
-      <div>
+      <>
         <Jumbotron>
           <h1>Quickstart</h1>
           <p>Featherweight Zero-Config Typesafe Isomorphic Cloud Framework.</p>
@@ -40,7 +40,7 @@ export default class QuickstartPage extends Page<{}, {}> {
           Seagull Quickstart &nbsp;
           <small>From Zero to Cloud</small>
         </PageHeader>
-      </div>
+      </>
     );
   }
 }
