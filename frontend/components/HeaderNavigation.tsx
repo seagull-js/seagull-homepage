@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
 
 export default () => (
-  <Navbar inverse collapseOnSelect>
+  <Navbar inverse collapseOnSelect style={{ borderRadius: 0 }}>
     <Navbar.Header>
       <Navbar.Brand>
-        <Link to={"/"}>
-          Seagull Framework
-        </Link>
+        <Link to={"/"}>Seagull Framework</Link>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
