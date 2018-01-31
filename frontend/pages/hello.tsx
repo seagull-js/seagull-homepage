@@ -61,8 +61,7 @@ export default class HelloPage extends Page<{}, {}> {
           </Jumbotron>
 
           <PageHeader>
-            Core Features &nbsp;
-            <small>Why use it?</small>
+            Core Features <small>Why use it?</small>
           </PageHeader>
 
           <p className="hidden">
