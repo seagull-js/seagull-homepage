@@ -64,11 +64,6 @@ export default class HelloPage extends Page<{}, {}> {
             Core Features <small>Why use it?</small>
           </PageHeader>
 
-          <p className="hidden">
-            The following buzzwords describe the framework and should give you
-            an idea of the functionalities:
-          </p>
-
           <Grid>
             <Row className="show-grid">
               <Col xs={12} sm={6} md={4}>
@@ -122,6 +117,39 @@ export default class HelloPage extends Page<{}, {}> {
                   including features like{" "}
                   <strong>ORM, SSR, caching and CDN</strong>.
                 </InfoPanel>
+              </Col>
+            </Row>
+          </Grid>
+
+          <PageHeader>
+            Building Blocks <small>What's inside?</small>
+          </PageHeader>
+
+          <Grid>
+            <Row className="show-grid">
+              <Col xs={12} sm={6} md={3}>
+                <img
+                  src="/assets/logo-typescript.png"
+                  style={{ maxWidth: "100%" }}
+                />
+              </Col>
+
+              <Col xs={12} sm={6} md={3}>
+                <img
+                  src="/assets/logo-react.png"
+                  style={{ maxWidth: "100%" }}
+                />
+              </Col>
+
+              <Col xs={12} sm={6} md={3}>
+                <img
+                  src="/assets/logo-serverless.png"
+                  style={{ maxWidth: "100%" }}
+                />
+              </Col>
+
+              <Col xs={12} sm={6} md={3}>
+                <img src="/assets/logo-aws.png" style={{ maxWidth: "100%" }} />
               </Col>
             </Row>
           </Grid>
