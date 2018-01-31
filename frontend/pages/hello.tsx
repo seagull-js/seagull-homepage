@@ -51,10 +51,7 @@ export default class HelloPage extends Page<{}, {}> {
               have never been easier and faster!
             </p>
             <div>
-              <Link className="btn btn-lg btn-primary" to={"/introduction"}>
-                Introduction
-              </Link>
-              <Link className="btn btn-lg btn-default" to={"/quickstart"}>
+              <Link className="btn btn-lg btn-primary" to={"/quickstart"}>
                 Quickstart
               </Link>
               <Link className="btn btn-lg btn-default" to={"/guides"}>
