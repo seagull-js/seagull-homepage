@@ -1,14 +1,15 @@
-import { Page } from "@seagull-js/seagull";
-import * as React from "react";
-import { Jumbotron, PageHeader, Tab, Tabs } from "react-bootstrap";
+import { Page } from '@seagull-js/seagull'
+import * as React from 'react'
+import { Jumbotron, PageHeader, Tab, Tabs } from 'react-bootstrap'
+import PageWrapper from '../components/PageWrapper'
 
 // the (stateful) component for the page with type checking
 export default class QuickstartPage extends Page<{}, {}> {
-  path = "/quickstart";
+  path = '/quickstart'
 
   render() {
     return (
-      <>
+      <PageWrapper>
         <Jumbotron>
           <h1>Quickstart</h1>
           <p>Featherweight Zero-Config Typesafe Isomorphic Cloud Framework.</p>
@@ -40,7 +41,7 @@ export default class QuickstartPage extends Page<{}, {}> {
           Seagull Quickstart &nbsp;
           <small>From Zero to Cloud</small>
         </PageHeader>
-      </>
-    );
+      </PageWrapper>
+    )
   }
 }

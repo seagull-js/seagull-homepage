@@ -1,12 +1,12 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
+import * as React from 'react'
+import { Link } from 'react-router-dom'
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 
 export default () => (
   <Navbar inverse collapseOnSelect style={{ borderRadius: 0 }}>
     <Navbar.Header>
       <Navbar.Brand>
-        <Link to={"/"}>The Seagull Framework</Link>
+        <Link to={'/'}>The Seagull Framework</Link>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
@@ -16,7 +16,9 @@ export default () => (
           Quickstart
         </NavItem>
         <NavDropdown eventKey={2} title="Guides" id="basic-nav-dropdown">
-          <MenuItem eventKey={3.1}>Action</MenuItem>
+          <MenuItem eventKey={3.1} href="/guides/apis">
+            Building APIs
+          </MenuItem>
           <MenuItem eventKey={3.2}>Another action</MenuItem>
           <MenuItem eventKey={3.3}>Something else here</MenuItem>
           <MenuItem divider />
@@ -25,4 +27,4 @@ export default () => (
       </Nav>
     </Navbar.Collapse>
   </Navbar>
-);
+)
