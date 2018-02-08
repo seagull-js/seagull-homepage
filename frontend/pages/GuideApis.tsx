@@ -4,6 +4,7 @@ import InfoMedia from '../components/InfoMedia'
 import { Media, PageHeader } from 'react-bootstrap'
 import PageWrapper from '../components/PageWrapper'
 import CodeSnippet from '../components/CodeSnippet'
+import Block from '../components/Block'
 
 const codeHelloWorld = `
 import { API, Request, Response } from '@seagull-js/seagull'
@@ -103,122 +104,134 @@ export default class GuideApis extends Page<{}, {}> {
   render() {
     return (
       <PageWrapper>
-        <h1>Building APIs</h1>
+        <Block wide="">
+          <h1>Building APIs</h1>
 
-        <InfoMedia
-          title="Futuristic Backend Technology"
-          image="/assets/seagull-icon.png"
-        >
-          Seagull provides you with a truly simple building block for building
-          backend systems: <strong>API Classes</strong>. They are really easy to
-          use and will transform into massively scalable nano-services, running
-          as <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> functions.
-          This allows you to skip configuring server instances, monitoring load
-          or calculating fixed monthly costs.
-        </InfoMedia>
+          <InfoMedia
+            title="Futuristic Backend Technology"
+            image="/assets/seagull-icon.png"
+          >
+            Seagull provides you with a truly simple building block for building
+            backend systems: <strong>API Classes</strong>. They are really easy
+            to use and will transform into massively scalable nano-services,
+            running as <a href="https://aws.amazon.com/lambda/">AWS Lambda</a>{' '}
+            functions. This allows you to skip configuring server instances,
+            monitoring load or calculating fixed monthly costs.
+          </InfoMedia>
 
-        <p>
-          This Guide will ... Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Iusto quasi quibusdam officiis ratione impedit nihil tenetur
-          recusandae voluptas voluptatum, odit possimus dicta, vel nobis soluta
-          fugiat non atque dignissimos aperiam.
-        </p>
+          <p>
+            This Guide will ... Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Iusto quasi quibusdam officiis ratione impedit
+            nihil tenetur recusandae voluptas voluptatum, odit possimus dicta,
+            vel nobis soluta fugiat non atque dignissimos aperiam.
+          </p>
+        </Block>
 
-        <PageHeader>
-          Scaffolding API Classes <small>with the CLI</small>
-        </PageHeader>
+        <Block wide="">
+          <PageHeader>
+            Scaffolding API Classes <small>with the CLI</small>
+          </PageHeader>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
-          quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
-          voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
-          dignissimos aperiam.{' '}
-        </p>
-        <code>seagull add api HelloWorld</code>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
+            quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
+            voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
+            dignissimos aperiam.{' '}
+          </p>
+          <code>seagull add api HelloWorld</code>
 
-        <CodeSnippet code={codeHelloWorld} />
+          <CodeSnippet code={codeHelloWorld} />
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
-          quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
-          voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
-          dignissimos aperiam.
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
+            quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
+            voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
+            dignissimos aperiam.
+          </p>
+        </Block>
 
-        <PageHeader>
-          Mounting API Classes <small>to URL endpoints</small>
-        </PageHeader>
+        <Block wide="">
+          <PageHeader>
+            Mounting API Classes <small>to URL endpoints</small>
+          </PageHeader>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
-          quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
-          voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
-          dignissimos aperiam.
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
+            quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
+            voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
+            dignissimos aperiam.
+          </p>
 
-        <code>seagull add api HelloWorld --path /hello</code>
+          <code>seagull add api HelloWorld --path /hello</code>
 
-        <CodeSnippet code={codeHelloWorldMounted} />
+          <CodeSnippet code={codeHelloWorldMounted} />
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
-          quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
-          voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
-          dignissimos aperiam.
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
+            quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
+            voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
+            dignissimos aperiam.
+          </p>
+        </Block>
 
-        <PageHeader>
-          Access Parameters <small>from Requests</small>
-        </PageHeader>
+        <Block wide="">
+          <PageHeader>
+            Access Parameters <small>from Requests</small>
+          </PageHeader>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
-          quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
-          voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
-          dignissimos aperiam.
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
+            quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
+            voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
+            dignissimos aperiam.
+          </p>
 
-        <CodeSnippet code={codeHelloWorldParams} />
+          <CodeSnippet code={codeHelloWorldParams} />
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
-          quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
-          voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
-          dignissimos aperiam.
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
+            quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
+            voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
+            dignissimos aperiam.
+          </p>
+        </Block>
 
-        <PageHeader>
-          Format Responses <small>and return them</small>
-        </PageHeader>
+        <Block wide="">
+          <PageHeader>
+            Format Responses <small>and return them</small>
+          </PageHeader>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
-          quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
-          voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
-          dignissimos aperiam.
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
+            quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
+            voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
+            dignissimos aperiam.
+          </p>
 
-        <code>seagull add api HelloService --path /greet --method POST</code>
+          <code>seagull add api HelloService --path /greet --method POST</code>
 
-        <CodeSnippet code={codeGreeterService} />
+          <CodeSnippet code={codeGreeterService} />
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
-          quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
-          voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
-          dignissimos aperiam.
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
+            quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
+            voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
+            dignissimos aperiam.
+          </p>
+        </Block>
 
-        <PageHeader>
-          Schedule Tasks <small>like cronjobs</small>
-        </PageHeader>
+        <Block wide="">
+          <PageHeader>
+            Schedule Tasks <small>like cronjobs</small>
+          </PageHeader>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
-          quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
-          voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
-          dignissimos aperiam.
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi
+            quibusdam officiis ratione impedit nihil tenetur recusandae voluptas
+            voluptatum, odit possimus dicta, vel nobis soluta fugiat non atque
+            dignissimos aperiam.
+          </p>
+        </Block>
       </PageWrapper>
     )
   }

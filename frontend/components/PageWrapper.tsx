@@ -5,7 +5,7 @@ import FooterNavigation from './FooterNavigation'
 export default ({ children }) => (
   <>
     <HeaderNavigation />
-    <div className="container">{children}</div>
+    <div className="">{children}</div>
     <FooterNavigation />
   </>
 )
