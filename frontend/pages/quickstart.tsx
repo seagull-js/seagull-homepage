@@ -1,4 +1,4 @@
-import { Page } from '@seagull-js/seagull'
+import { Page } from '@seagull/core'
 import * as React from 'react'
 import { Jumbotron, PageHeader, Tab, Tabs } from 'react-bootstrap'
 import PageWrapper from '../components/PageWrapper'

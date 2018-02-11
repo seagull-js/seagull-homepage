@@ -1,5 +1,5 @@
 // library imports
-import { API, Request, Response, Routing } from '@seagull-js/seagull'
+import { API, Request, Response, Routing } from '@seagull/core'
 import { renderToString as render } from 'react-dom/server';
 
 // configuration imports
