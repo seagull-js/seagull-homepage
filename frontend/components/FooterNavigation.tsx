@@ -15,6 +15,9 @@ export default () => (
               <li>
                 <Link to={'/quickstart'}>Quickstart</Link>
               </li>
+              <li>
+                <Link to={'/architecture'}>Architecture</Link>
+              </li>
             </ul>
           </Col>
 
