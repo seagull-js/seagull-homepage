@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { Page } from '@seagull/core'
 import InfoMedia from '../components/InfoMedia'
-import { Media, PageHeader } from 'react-bootstrap'
+import { PageHeader } from 'react-bootstrap'
 import PageWrapper from '../components/PageWrapper'
 import CodeSnippet from '../components/CodeSnippet'
 import Block from '../components/Block'
 
 const codeHelloWorld = `
-import { API, Request, Response } from '@seagull-js/seagull'
+import { API, Request, Response } from '@seagull/core'
 
 export default class HelloWorld extends API {
   /**
@@ -20,7 +20,7 @@ export default class HelloWorld extends API {
 `
 
 const codeHelloWorldMounted = `
-import { API, Request, Response } from '@seagull-js/seagull'
+import { API, Request, Response } from '@seagull/core'
 
 export default class HelloWorld extends API {
   /**
@@ -42,7 +42,7 @@ export default class HelloWorld extends API {
 `
 
 const codeHelloWorldParams = `
-import { API, Request, Response } from '@seagull-js/seagull'
+import { API, Request, Response } from '@seagull/core'
 
 export default class HelloWorld extends API {
   /**
@@ -66,7 +66,7 @@ export default class HelloWorld extends API {
 `
 
 const codeGreeterService = `
-import { API, Request, Response } from '@seagull-js/seagull'
+import { API, Request, Response } from '@seagull/core'
 
 export default class HelloService extends API {
   /**
