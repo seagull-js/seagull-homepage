@@ -27,6 +27,9 @@ export default () => (
               <li>
                 <Link to={'/guides/apis'}>Building APIs</Link>
               </li>
+              <li>
+                <Link to={'/guides/pages'}>Creating Pages</Link>
+              </li>
             </ul>
           </Col>
 
