@@ -29,16 +29,13 @@ export default class QuickstartPage extends Page<{}, {}> {
         <Block wide="">
           <Jumbotron>
             <h1>Quickstart</h1>
-            <p>
-              Featherweight Zero-Config Typesafe Isomorphic Cloud Framework.
-            </p>
+            <p>From Zero to Cloud</p>
           </Jumbotron>
         </Block>
 
         <Block wide="">
           <PageHeader>
-            Seagull Quickstart &nbsp;
-            <small>From Zero to Cloud</small>
+            Setup your Environment <small>in just a few minutes</small>
           </PageHeader>
           <p>Installing node.js on your computer...</p>
           <Tabs defaultActiveKey={1} id="quickstart-setup">
@@ -52,12 +49,16 @@ export default class QuickstartPage extends Page<{}, {}> {
               ToDo
             </Tab>
           </Tabs>
+          <p>
+            Once you have node.js installed successfully (check with{' '}
+            <code>$ node -v</code>), installing seagull is easy:
+          </p>
+          <CodeSnippet language="bash" code={`$ npm install -g @seagull/cli`} />
         </Block>
 
         <Block wide="">
           <PageHeader>
-            Seagull Quickstart &nbsp;
-            <small>From Zero to Cloud</small>
+            Bootstrap an App <small>with the CLI</small>
           </PageHeader>
         </Block>
       </PageWrapper>

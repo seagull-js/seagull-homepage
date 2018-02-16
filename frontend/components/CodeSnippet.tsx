@@ -6,7 +6,7 @@ export default props => (
   <SyntaxHighlighter
     language={props.language || 'typescript'}
     style={theme}
-    showLineNumbers="true"
+    showLineNumbers={props.language !== 'bash'}
   >
     {props.code.trim()}
   </SyntaxHighlighter>
