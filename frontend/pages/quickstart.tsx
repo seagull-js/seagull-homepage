@@ -3,6 +3,21 @@ import * as React from 'react'
 import { Jumbotron, PageHeader, Tab, Tabs } from 'react-bootstrap'
 import PageWrapper from '../components/PageWrapper'
 import Block from '../components/Block'
+import CodeSnippet from '../components/CodeSnippet'
+
+const codeInstallOSX = `
+# If you haven't already, install the node version manager:
+$ brew install nvm
+
+# reload current shell with tweaked environment for nvm
+$ echo "source $(brew --prefix nvm)/nvm.sh" >> ~/.profile
+$ source ~/.profile
+
+# latest LTS version which AWS Lambda supports
+$ nvm install 6.10.3
+
+# always use this node.js version as default in new shells
+$ nvm alias default 6.10.3`
 
 // the (stateful) component for the page with type checking
 export default class QuickstartPage extends Page<{}, {}> {
@@ -25,18 +40,10 @@ export default class QuickstartPage extends Page<{}, {}> {
             Seagull Quickstart &nbsp;
             <small>From Zero to Cloud</small>
           </PageHeader>
+          <p>Installing node.js on your computer...</p>
           <Tabs defaultActiveKey={1} id="quickstart-setup">
             <Tab eventKey={1} title="Mac OS">
-              <p>If you haven't already, install the node version manager:</p>
-              <pre>$ brew install nvm</pre>
-              <p>reload current shell with tweaked environment for nvm</p>
-              <pre>
-                $ echo "source $(brew --prefix nvm)/nvm.sh" >> ~/.profile
-              </pre>
-              <p>latest LTS version which AWS Lambda supports</p>
-              <pre>$ nvm install 6.10.3</pre>
-              <p># always use this node.js version as default in new shells</p>
-              <pre>$ nvm alias default 6.10.3</pre>
+              <CodeSnippet language="bash" code={codeInstallOSX} />
             </Tab>
             <Tab eventKey={2} title="Windows">
               ToDo
