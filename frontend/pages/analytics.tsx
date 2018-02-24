@@ -5,6 +5,21 @@ import PageWrapper from '../components/PageWrapper'
 import Block from '../components/Block'
 import CodeSnippet from '../components/CodeSnippet'
 
+const codeTrackRevenue = `
+import { Tracking } from '@seagull/core'
+
+Tracking.trackRevenue({
+  id: 'purchase order id', // whatever this is for you
+  revenue: 1234.56 // the money amount paid (full)
+})
+`
+
+const codeTrackReferral = `
+import { Tracking } from '@seagull/core'
+
+Tracking.trackReferral('twitter')
+`
+
 export default class architecture extends Page<{}, {}> {
   /**
    * the url path this page will be mounted on
@@ -205,8 +220,11 @@ export default class architecture extends Page<{}, {}> {
           <p>
             Seagull <strong>will not</strong> measure this rate automatically
             for now, since this is highly individual per app and non-trivial to
-            track.
+            measure without manual assistance. However, you can just invoke the
+            following:
           </p>
+
+          <CodeSnippet code={codeTrackReferral} />
         </Block>
 
         <Block wide="">
@@ -222,8 +240,7 @@ export default class architecture extends Page<{}, {}> {
             event with data:
           </p>
 
-          <pre>{`import {trackRevenue} from '@seagull/core'`}</pre>
-          <pre>{`trackRevenue(data)`}</pre>
+          <CodeSnippet code={codeTrackRevenue} />
 
           <p>
             The interface definition will aid you to achieve data cleanness, and
