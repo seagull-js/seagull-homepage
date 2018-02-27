@@ -1,9 +1,9 @@
-import * as React from 'react'
 import { Page } from '@seagull/core'
+import * as React from 'react'
 import { Jumbotron, PageHeader } from 'react-bootstrap'
-import PageWrapper from '../components/PageWrapper'
 import Block from '../components/Block'
 import CodeSnippet from '../components/CodeSnippet'
+import PageWrapper from '../components/PageWrapper'
 
 const codeTrackRevenue = `
 import { Tracking } from '@seagull/core'
@@ -20,7 +20,7 @@ import { Tracking } from '@seagull/core'
 Tracking.trackReferral('twitter')
 `
 
-export default class architecture extends Page<{}, {}> {
+export default class Architecture extends Page<{}, {}> {
   /**
    * the url path this page will be mounted on
    */
