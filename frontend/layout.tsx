@@ -8,6 +8,7 @@ export default function Layout({ content }) {
       <Head>
         <Favicons favicons={['favicon.ico']} />
         <link rel="stylesheet" href="/assets/bootstrap.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body renderedContent={content}>
         <script src="/assets/bundle.js" />

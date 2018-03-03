@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 export default ({ title, children }) => (
-  <div className="panel panel-default">
+  <div className="panel panel-default" style={{ color: 'black' }}>
     <div className="panel-heading">
       <h3 style={{ margin: '0' }}>{title}</h3>
     </div>

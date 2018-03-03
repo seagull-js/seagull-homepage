@@ -1,11 +1,22 @@
 import * as React from 'react'
-import HeaderNavigation from './HeaderNavigation'
+import { withRouter } from 'react-router'
+import Block from './Block'
 import FooterNavigation from './FooterNavigation'
+import HeaderNavigation from './HeaderNavigation'
 
-export default ({ children }) => (
+export interface IProps {
+  match: any
+  location: any
+  history: any
+  children: any
+}
+
+const Wrapper = (props: IProps) => (
   <>
-    <HeaderNavigation />
-    <div className="">{children}</div>
+    {props.location.pathname === '/' ? <></> : <HeaderNavigation />}
+    <div className="">{props.children}</div>
     <FooterNavigation />
   </>
 )
+
+export default withRouter(Wrapper)
