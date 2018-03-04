@@ -1,4 +1,4 @@
-import { Page } from '@seagull/core'
+import { Meta, Page } from '@seagull/core'
 import * as React from 'react'
 import { Jumbotron, PageHeader } from 'react-bootstrap'
 import Block from '../components/Block'
@@ -32,6 +32,7 @@ export default class Architecture extends Page<{}, {}> {
   render() {
     return (
       <PageWrapper>
+        <Meta title="Analytics | Seagull" />
         <Block wide="">
           <Jumbotron>
             <h1>Analytics</h1>

@@ -11,7 +11,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "@seagull/core": "^0.8.0",
+        "@seagull/core": "^0.8.1",
         "react-bootstrap": "^0.31.5",
         "react-syntax-highlighter": "^7.0.0"
     },
@@ -22,6 +22,10 @@
         "@types/react-bootstrap": "^0.31.9"
     },
     "seagull": {
-        "domains": ["seagull.technology"]
+        "domains": ["seagull.technology"],
+        "analytics": {
+            "enabled": true,
+            "ga": "UA-115067721-1"
+        }
     }
 }
