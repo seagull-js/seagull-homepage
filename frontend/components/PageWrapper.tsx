@@ -1,10 +1,9 @@
+import { Meta } from '@seagull/core'
 import * as React from 'react'
 import { withRouter } from 'react-router'
 import Block from './Block'
-import { Meta } from '@seagull/core'
 import FooterNavigation from './FooterNavigation'
 import HeaderNavigation from './HeaderNavigation'
-
 
 export interface IProps {
   match: any
