@@ -12,7 +12,6 @@ export interface IProps {
   history: any
   children: any
 }
-import { Helmet } from 'react-helmet'
 
 const Wrapper = (props: IProps) => (
   <>
