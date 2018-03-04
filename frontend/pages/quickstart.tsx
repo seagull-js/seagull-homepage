@@ -1,9 +1,9 @@
 import { Page } from '@seagull/core'
 import * as React from 'react'
 import { Jumbotron, PageHeader, Tab, Tabs } from 'react-bootstrap'
-import PageWrapper from '../components/PageWrapper'
 import Block from '../components/Block'
 import CodeSnippet from '../components/CodeSnippet'
+import PageWrapper from '../components/PageWrapper'
 
 const codeInstallOSX = `
 # If you haven't already, install the node version manager:
