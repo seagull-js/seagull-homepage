@@ -11,7 +11,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "@seagull/core": "^0.6.5",
+        "@seagull/core": "^0.8.0",
         "react-bootstrap": "^0.31.5",
         "react-syntax-highlighter": "^7.0.0"
     },
