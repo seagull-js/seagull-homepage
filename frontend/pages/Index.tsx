@@ -1,4 +1,5 @@
 import { Page } from '@seagull/core'
+import { Block, H1, H2, Text } from '@seagull/ui'
 import * as React from 'react'
 import {
   Alert,
@@ -11,7 +12,6 @@ import {
   Row,
 } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Block from '../components/Block'
 import DefaultPanel from '../components/DefaultPanel'
 import InfoMedia from '../components/InfoMedia'
 import PageWrapper from '../components/PageWrapper'
@@ -35,46 +35,41 @@ export default class HelloPage extends Page<{}, {}> {
           </div>
         </Block>
 
-        <Block wide="true">
-          <Block>
-            <h1 style={{ color: 'white' }}>Launch your idea today!</h1>
-            <hr />
-            <p className="lead">
-              The Seagull Framework empowers <em>you</em> to <em>build</em>{' '}
-              sophisticated web applications and <em>deploy</em> it straight to
-              your highly scalable serverless infrastructure. With feedback
-              loops included, it is the ideal tool for LEAN software
-              development.
-            </p>
-            <div>
-              <Link className="btn btn-lg btn-primary" to={'/quickstart'}>
-                Quickstart
-              </Link>{' '}
-              <Link className="btn btn-lg btn-default" to={'/guides'}>
-                Guides
-              </Link>
-            </div>
-          </Block>
+        <Block inverse>
+          <H1 inverse>Launch your idea today!</H1>
+          <Text inverse lead>
+            The Seagull Framework empowers <em>you</em> to <em>build</em>{' '}
+            sophisticated web applications and <em>deploy</em> it straight to
+            your highly scalable serverless infrastructure. With feedback loops
+            included, it is the ideal tool for LEAN software development.
+          </Text>
+          <div>
+            <Link className="btn btn-lg btn-primary" to={'/quickstart'}>
+              Quickstart
+            </Link>{' '}
+            <Link className="btn btn-lg btn-default" to={'/guides'}>
+              Guides
+            </Link>
+          </div>
         </Block>
 
         <Block>
-          <h2>
-            Overview <small>What is this?</small>
-          </h2>
-          <hr />
+          <H2>Overview</H2>
+          <Text lead>
+            TL;DR: it is <strong>React.js</strong> and{' '}
+            <strong>Typescript Code</strong> running on{' '}
+            <strong>AWS Lambda</strong> and deployed via{' '}
+            <strong>Serverless</strong>.
+          </Text>
+
           <Alert bsStyle="warning">
             <strong>This is an pre-alpha framework!</strong>
             <br />
             The project is under heavy development and APIs will change. Only
             use it for experimentational stuff right now.
           </Alert>
-          <p className="lead">
-            TL;DR: it is <strong>React.js</strong> and{' '}
-            <strong>Typescript Code</strong> running on{' '}
-            <strong>AWS Lambda</strong> and deployed via{' '}
-            <strong>Serverless</strong>.
-          </p>
-          <p>
+
+          <Text>
             The longer story is that seagull combines the most powerful and
             popular web development options into one nifty package and builds on
             top of it. Getting started with React is simple, but deploying a
@@ -83,98 +78,90 @@ export default class HelloPage extends Page<{}, {}> {
             backend apps is fairly easy at the beginning, but deploying things
             is such a hassle with choosing server providers, setting things up,
             doing deployment steps manually, the list goes on.
-          </p>
+          </Text>
 
-          <p>
+          <Text>
             If you went through <em>all this pain</em> before, like most
             developers and entrepreneurs nowadays, you know how much of a show
             stopper this is when it comes to <em>"just getting started"</em>.
             Seagull solves all of this at once. If you know javascript, the
             learning curve should only be a few minutes.
-          </p>
+          </Text>
 
-          <p>
+          <Text>
             The Seagull Framework provides you with a immediately usable
             React.js frontend structure with local development server included.
             Also, backend code can be written like they're just API functions.
             Once you're done prototyping, seagull will compile everything for
             you and deploys the app into your AWS account.
-          </p>
+          </Text>
         </Block>
 
-        <Block wide="true">
-          <Block>
-            <h2 style={{ color: 'white' }}>
-              Features <small>Why use it?</small>
-            </h2>
-            <hr />
-            <p className="lead">
-              Seagull is a Featherweight Zero-Config Typesafe Isomorphic Cloud
-              Framework. If you're curious, this is what it means:
-            </p>
+        <Block inverse>
+          <H2 inverse>Features</H2>
+          <Text inverse lead>
+            Seagull is a Featherweight Zero-Config Typesafe Isomorphic Cloud
+            Framework. If you're curious, this is what it means:
+          </Text>
 
-            <Row className="show-grid">
-              <Col xs={12} sm={6} md={4}>
-                <DefaultPanel title="Featherweight">
-                  Enjoy a <strong>tiny codebase</strong> for your app as well as{' '}
-                  <strong>lightweight deployment bundles</strong> and a{' '}
-                  <strong>small learning curve</strong>.
-                </DefaultPanel>
-              </Col>
+          <Row className="show-grid">
+            <Col xs={12} sm={6} md={4}>
+              <DefaultPanel title="Featherweight">
+                Enjoy a <strong>tiny codebase</strong> for your app as well as{' '}
+                <strong>lightweight deployment bundles</strong> and a{' '}
+                <strong>small learning curve</strong>.
+              </DefaultPanel>
+            </Col>
 
-              <Col xs={12} sm={6} md={4}>
-                <DefaultPanel title="Zero-Config">
-                  <strong>No configuration hell</strong>, thanks to a{' '}
-                  <strong>dedicated CLI tool</strong> which manages the
-                  development workflows in the spirit of{' '}
-                  <strong>Convention over Configuration</strong>.
-                </DefaultPanel>
-              </Col>
+            <Col xs={12} sm={6} md={4}>
+              <DefaultPanel title="Zero-Config">
+                <strong>No configuration hell</strong>, thanks to a{' '}
+                <strong>dedicated CLI tool</strong> which manages the
+                development workflows in the spirit of{' '}
+                <strong>Convention over Configuration</strong>.
+              </DefaultPanel>
+            </Col>
 
-              <Col xs={12} sm={6} md={4}>
-                <DefaultPanel title="Typesafe">
-                  Seagull leverages <strong>Typescript</strong> extensively to
-                  make <strong>features discoverable</strong> and introduce a{' '}
-                  <strong>safety layer</strong> back into fullstack web
-                  development.
-                </DefaultPanel>
-              </Col>
+            <Col xs={12} sm={6} md={4}>
+              <DefaultPanel title="Typesafe">
+                Seagull leverages <strong>Typescript</strong> extensively to
+                make <strong>features discoverable</strong> and introduce a{' '}
+                <strong>safety layer</strong> back into fullstack web
+                development.
+              </DefaultPanel>
+            </Col>
 
-              <Col xs={12} sm={6} md={4}>
-                <DefaultPanel title="Isomorphic">
-                  Built ontop of the <strong>Javascript ecosystem</strong> and
-                  embracing <strong>write once - run everywhere</strong>,
-                  extending the boundaries of{' '}
-                  <strong>don't repeat yourself</strong>.
-                </DefaultPanel>
-              </Col>
+            <Col xs={12} sm={6} md={4}>
+              <DefaultPanel title="Isomorphic">
+                Built ontop of the <strong>Javascript ecosystem</strong> and
+                embracing <strong>write once - run everywhere</strong>,
+                extending the boundaries of{' '}
+                <strong>don't repeat yourself</strong>.
+              </DefaultPanel>
+            </Col>
 
-              <Col xs={12} sm={6} md={4}>
-                <DefaultPanel title="Cloud">
-                  Your deployed app will run on a{' '}
-                  <strong>clean serverless architecture</strong>, resulting in{' '}
-                  <strong>minimal maintenance costs</strong> and{' '}
-                  <strong>maximal scalability</strong>.
-                </DefaultPanel>
-              </Col>
+            <Col xs={12} sm={6} md={4}>
+              <DefaultPanel title="Cloud">
+                Your deployed app will run on a{' '}
+                <strong>clean serverless architecture</strong>, resulting in{' '}
+                <strong>minimal maintenance costs</strong> and{' '}
+                <strong>maximal scalability</strong>.
+              </DefaultPanel>
+            </Col>
 
-              <Col xs={12} sm={6} md={4}>
-                <DefaultPanel title="Framework">
-                  Seagull comes with <strong>batteries included</strong> for
-                  building interactive <strong>fullstack web apps</strong>,
-                  including features like{' '}
-                  <strong>ORM, SSR, caching and CDN</strong>.
-                </DefaultPanel>
-              </Col>
-            </Row>
-          </Block>
+            <Col xs={12} sm={6} md={4}>
+              <DefaultPanel title="Framework">
+                Seagull comes with <strong>batteries included</strong> for
+                building interactive <strong>fullstack web apps</strong>,
+                including features like{' '}
+                <strong>ORM, SSR, caching and CDN</strong>.
+              </DefaultPanel>
+            </Col>
+          </Row>
         </Block>
 
         <Block>
-          <h2>
-            Basis <small>What's inside?</small>
-          </h2>
-          <hr />
+          <H2>What's inside?</H2>
 
           <InfoMedia
             title="Node.js"

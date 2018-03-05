@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@seagull/core": "^0.8.1",
+        "@seagull/ui": "0.7.0",
         "react-bootstrap": "^0.31.5",
         "react-syntax-highlighter": "^7.0.0"
     },
