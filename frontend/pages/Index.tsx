@@ -1,16 +1,7 @@
 import { Page } from '@seagull/core'
-import { Block, H1, H2, Text } from '@seagull/ui'
+import { Alert, Block, H1, H2, H3, Text } from '@seagull/ui'
 import * as React from 'react'
-import {
-  Alert,
-  Button,
-  Col,
-  Grid,
-  Jumbotron,
-  PageHeader,
-  Panel,
-  Row,
-} from 'react-bootstrap'
+import { Button, Col, Grid, Jumbotron, Panel, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import DefaultPanel from '../components/DefaultPanel'
 import InfoMedia from '../components/InfoMedia'
@@ -38,22 +29,32 @@ export default class HelloPage extends Page<{}, {}> {
         <Block inverse>
           <H1 inverse>Launch your idea today!</H1>
           <Text inverse lead>
-            The Seagull Framework empowers <em>you</em> to <em>build</em>{' '}
-            sophisticated web applications and <em>deploy</em> it straight to
-            your highly scalable serverless infrastructure. With feedback loops
-            included, it is the ideal tool for LEAN software development.
+            The Seagull Framework empowers <em>you</em> to build sophisticated
+            web applications and deploy it straight to your highly scalable
+            serverless infrastructure. With feedback loops included, it is the
+            ideal tool for LEAN software development.
           </Text>
-          <div>
-            <Link className="btn btn-lg btn-primary" to={'/quickstart'}>
+          <Text inverse>
+            <Link to={'/quickstart'} style={{ color: 'white' }}>
               Quickstart
-            </Link>{' '}
-            <Link className="btn btn-lg btn-default" to={'/guides'}>
+            </Link>
+            &nbsp;&bull;&nbsp;
+            <Link to={'/'} style={{ color: 'white' }}>
               Guides
             </Link>
-          </div>
+            &nbsp;&bull;&nbsp;
+            <Link to={'/'} style={{ color: 'white' }}>
+              Community
+            </Link>
+          </Text>
         </Block>
 
         <Block>
+          <Alert title="This is a pre-alpha framework!">
+            The project is under heavy development and APIs will change. Only
+            use it for experimentational stuff right now.
+          </Alert>
+
           <H2>Overview</H2>
           <Text lead>
             TL;DR: it is <strong>React.js</strong> and{' '}
@@ -62,39 +63,35 @@ export default class HelloPage extends Page<{}, {}> {
             <strong>Serverless</strong>.
           </Text>
 
-          <Alert bsStyle="warning">
-            <strong>This is an pre-alpha framework!</strong>
-            <br />
-            The project is under heavy development and APIs will change. Only
-            use it for experimentational stuff right now.
-          </Alert>
+          <Row className="show-grid" style={{ margin: '20px 0' }}>
+            <Col xs={12} sm={6} md={4}>
+              <img src="/assets/lean-circle.png" style={{ width: '100%' }} />
+            </Col>
+            <Col xs={12} sm={6} md={8}>
+              <H3>Build.</H3>
+              <Text>
+                The Seagull Framework combines the most powerful and popular web
+                development options into one nifty package. Hit the ground
+                running immediately with preconfigured React.js and deploy to
+                the AWS Cloud within minutes.
+              </Text>
 
-          <Text>
-            The longer story is that seagull combines the most powerful and
-            popular web development options into one nifty package and builds on
-            top of it. Getting started with React is simple, but deploying a
-            final product with all things like server-side rendering, routing,
-            SEO and so on is a totally different thing. Also developing node.js
-            backend apps is fairly easy at the beginning, but deploying things
-            is such a hassle with choosing server providers, setting things up,
-            doing deployment steps manually, the list goes on.
-          </Text>
+              <H3>Measure.</H3>
+              <Text>
+                Enable analytics for your app and seagull will automatically
+                track user interactions to Google Analytics (realtime
+                dashboards) and it's own backend (exact historical data). Pirate
+                Metrics are already implemented, too.
+              </Text>
 
-          <Text>
-            If you went through <em>all this pain</em> before, like most
-            developers and entrepreneurs nowadays, you know how much of a show
-            stopper this is when it comes to <em>"just getting started"</em>.
-            Seagull solves all of this at once. If you know javascript, the
-            learning curve should only be a few minutes.
-          </Text>
-
-          <Text>
-            The Seagull Framework provides you with a immediately usable
-            React.js frontend structure with local development server included.
-            Also, backend code can be written like they're just API functions.
-            Once you're done prototyping, seagull will compile everything for
-            you and deploys the app into your AWS account.
-          </Text>
+              <H3>Learn.</H3>
+              <Text>
+                Generate daily/weekly/monthly reports from your app with
+                actionable metrics and results. There might even be automatic
+                hypothesis management in the future.
+              </Text>
+            </Col>
+          </Row>
         </Block>
 
         <Block inverse>
