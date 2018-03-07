@@ -11,7 +11,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "@seagull/core": "^0.8.1",
+        "@seagull/core": "^0.8.4",
         "@seagull/ui": "0.8.1",
         "react-bootstrap": "^0.31.5",
         "react-syntax-highlighter": "^7.0.0"
@@ -27,6 +27,7 @@
         "analytics": {
             "enabled": true,
             "ga": "UA-115067721-1"
-        }
+        },
+        "faviconFiles": ["favicon-128.png"]
     }
 }

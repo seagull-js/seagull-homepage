@@ -52,7 +52,7 @@ export default class HelloPage extends Page<{}, {}> {
         <Block>
           <Alert title="This is a pre-alpha framework!">
             The project is under heavy development and APIs will change. Only
-            use it for experimentational stuff right now.
+            use it for experimental stuff right now.
           </Alert>
 
           <H2>Overview</H2>
