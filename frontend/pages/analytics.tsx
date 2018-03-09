@@ -1,8 +1,9 @@
 import { Meta, Page } from '@seagull/core'
+import { Block, H1, H2, H3, Text } from '@seagull/ui'
 import * as React from 'react'
-import { Jumbotron, PageHeader } from 'react-bootstrap'
-import Block from '../components/Block'
+import { Col, Panel, Row, Well } from 'react-bootstrap'
 import CodeSnippet from '../components/CodeSnippet'
+import InfoMedia from '../components/InfoMedia'
 import PageWrapper from '../components/PageWrapper'
 
 const codeTrackRevenue = `
@@ -33,185 +34,190 @@ export default class Architecture extends Page<{}, {}> {
     return (
       <PageWrapper>
         <Meta title="Analytics | Seagull" />
-        <Block wide="">
-          <Jumbotron>
-            <h1>Analytics</h1>
-            <p>
+
+        <div
+          style={{
+            background: 'url("/assets/content/macbook-charts.jpg")',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+          }}
+        >
+          <Block>
+            <H1 inverse>Analytics</H1>
+            <Text inverse lead>
               Instantly start measuring user interactions and conversion rates
-              for your app. Seagull implements <strong>Pirate Metrics</strong>{' '}
-              with multiplex reporting (realtime with google analytics, precise
-              historical data in the backend).
-            </p>
-          </Jumbotron>
+              for your app. Seagull has <strong>Pirate Metrics</strong> built
+              in. In this short guide you will learn how to work truly
+              data-driven, what your essential metrics are and how the seagull
+              framework can help you succeed.
+            </Text>
+          </Block>
+        </div>
+
+        <Block>
+          <H2>Data Driven Development</H2>
+
+          <Row>
+            <Col xs={12} md={6}>
+              <Text lead>
+                Success, Profit and Growth are side-effects of customer
+                satisfaction.
+              </Text>
+              <Text>
+                How do you know your customers like what you're building right
+                now? You measure user interactions. But what do you actually
+                want to measure? Which numbers are really important? Which ones
+                are not? How to implement tracking ideally? These are hard
+                questions and need time to figure out <em>in addition to</em>{' '}
+                actually building the software product.
+              </Text>
+
+              <Text>
+                Seagull gives you an easy analytical framework to start
+                measuring user interactions right away: The famously known{' '}
+                <a
+                  href="https://de.slideshare.net/dmc500hats/startup-metrics-for-pirates-long-version"
+                  target="_blank"
+                >
+                  Pirate Metrics
+                </a>.
+              </Text>
+              <Text>
+                With just these five key performance indicators (KPIs) you are
+                able to have a clear picture about the customer journeys using
+                your app. Strictly speaking, these numbers tell you exactly what
+                you should focus on next for maximum growth.
+              </Text>
+            </Col>
+            <Col xs={12} md={6}>
+              <div style={{ textAlign: 'center' }}>
+                <img
+                  src="/assets/content/pirate-metrics.png"
+                  style={{ maxWidth: '100%', maxHeight: 300 }}
+                />
+              </div>
+            </Col>
+          </Row>
         </Block>
 
-        <Block wide="">
-          <PageHeader>
-            Data Driven Development <small>right from the start</small>
-          </PageHeader>
+        <Block>
+          <H2>Activate Analytics</H2>
 
-          <p>
-            Old-fashioned managers, first-time entrepreneurs as well as
-            corporate developers often make the same big mistake: building
-            things based on emotions, specifications or theoretical
-            profitability. The thing is: nothing will have success if you don't
-            build explicitly for your target users. If you give customers
-            exactly what they need, even if they didn't even know they wanted it
-            in the first place, success will follow.{' '}
-            <em>
-              Profit and growth always are side-effects of customer satisfaction
-              rates
-            </em>.
-          </p>
-
-          <p>
-            How do you know your customers like what you're building right now?
-            You measure user interactions. But what do you actually want to
-            measure? Which numbers are really important? It's easy to be drawn
-            into a complex tracking dashboard but generating zero insights. Many
-            teams experience the problem from starting completely blind to
-            over-track everything leading to analytics paralysis. Not to mention
-            that implementing all kinds of data tracking consumes huge amounts
-            of development efforts, time that doesn't flow into actual product
-            development.
-          </p>
-
-          <p>
-            How to solve these issues? Actually, it's quite easy to get going in
-            the right direction. Nearly every startup and product can begin with
-            the exact same analytical framework:{' '}
-            <a
-              href="https://de.slideshare.net/dmc500hats/startup-metrics-for-pirates-long-version"
-              target="_blank"
-            >
-              Pirate Metrics
-            </a>. In short, it measures the following key metrics:{' '}
-            <strong>A</strong>cquisition, <strong>A</strong>ctivation,{' '}
-            <strong>R</strong>etention, <strong>R</strong>eferral and{' '}
-            <strong>R</strong>venue. You only have to provide a few simple event
-            triggers to seagull to implement all tracking and analytics
-            pipelines deriving off Pirate Metrics.
-          </p>
-        </Block>
-
-        <Block wide="">
-          <PageHeader>
-            Activate Metrict Tracking <small>with one line</small>
-          </PageHeader>
-
-          <p>
-            Because Seagull can also be used for building internal tools,
-            visualizations or dashboards, all metric tracking is disabled by
-            default. To enable it, execute the following CLI command:
-          </p>
+          <Text>
+            Enable automatic tracking of the metrics with the following CLI
+            command:
+          </Text>
 
           <CodeSnippet
             language="bash"
             code={`$ seagull enable analytics --id UA-XXXXXX-X`}
           />
 
-          <p>
+          <Text>
             The important thing is to provide a real, valid google analytics
             tracking id. This will setup all neccessary steps to enable google
             analytics tracking, scaffolding a backend API handler for storing
             additional data and exposes a set of simple triggers for the pirate
             metrics.
-          </p>
+          </Text>
         </Block>
 
-        <Block wide="">
-          <PageHeader>
-            Acquisitions <small>where users come from</small>
-          </PageHeader>
+        <Block>
+          <H2>Acquisitions</H2>
 
-          <p>
-            The frontend of any Seagull web application is a so called{' '}
-            <em>Single-Page-App (SPA)</em>. Therefore, the type of user
-            acquisition is called <em>traffic</em>. Traffic can originate from
-            different sources:
-          </p>
+          <InfoMedia
+            title="Zero-Configuration Data Collector"
+            image="/assets/seagull-icon.png"
+          >
+            Seagull automatically tracks all user acquisitions to google
+            analytics as well as your own CloudWatch log streams. The basic
+            issues of tracking Single-Page-Apps are already solved for you.
+          </InfoMedia>
 
-          <ul>
-            <li>
-              <strong>Organic</strong>: people ask search engines (mostly:
-              google) for answers to their current problems and click on search
-              results that may have the answer. Optimizing this traffic origin
-              is a craft called <em>Search Engine Optimization (SEO)</em> and
-              Seagull may help you automatizing all the details for you.
-            </li>
-            <li>
-              <strong>Social</strong>: people follow recommendations of other
-              people they might know or follow, clicking links on social
-              networks or messengers. Optimizing this traffic origin is an art
-              called <em>Branding</em> and for digital products has a strong
-              focus on the sub-discipline of <em>Content Marketing</em>:
-              creating interesting content that users will share.
-            </li>
-            <li>
-              <strong>Paid</strong>: sidetrack people who are looking for
-              something else or nothing at all through advertising. From
-              classical Banners over sponsored search results to blogvertising,
-              this includes everything where you buy clicks to your application
-              in cash.
-            </li>
-            <li>
-              <strong>Direct</strong>: aside from very strong brands, this
-              traffic only comes through retention from users who have already
-              been on your web app. This is a topic of the dedicated metric{' '}
-              <em>Retention</em> further below. Also, Seagull automatically
-              separates real retention users from first-time direct traffic
-              cleanly.
-            </li>
-          </ul>
-
-          <p>
-            All these Acquisition Origins are combined into a single Metric by
-            Seagull, but the individual origins are tracked as well. You don't
-            need to do anything here once `analytics` is enabled correctly for
-            your app. Seagull will initiate a hidden session with uuid for every
-            visitor which is persistent through visits (as much as possible).
-          </p>
+          <Row>
+            <Col xs={12} sm={6}>
+              <div style={{ textAlign: 'center' }}>
+                <img
+                  src="/assets/content/traffic-sources.png"
+                  style={{ maxWidth: '100%', maxHeight: 300 }}
+                />
+              </div>
+            </Col>
+            <Col xs={12} sm={6}>
+              <Text lead>Start with getting as much traffic as possible:</Text>
+              <ul>
+                <li>
+                  <strong>Organic</strong>: people ask search engines for
+                  answers to their current problems and click on search results
+                  that may have the answer. Optimizing this traffic origin is a
+                  craft called <em>Search Engine Optimization (SEO)</em>.
+                </li>
+                <li>
+                  <strong>Social</strong>: people follow recommendations of
+                  other people they might know or follow, clicking links on
+                  social networks or messengers. Optimizing this traffic origin
+                  is an art called <em>Branding</em>.
+                </li>
+                <li>
+                  <strong>Paid</strong>: sidetrack people who are looking for
+                  something else or nothing at all through advertising. From
+                  classical Banners over sponsored search results to
+                  blogvertising, this includes everything where you buy clicks
+                  to your application in cash.
+                </li>
+                <li>
+                  <strong>Direct</strong>: aside from very strong brands, this
+                  traffic only comes through retention from users who have
+                  already been on your web app. This is a topic of the dedicated
+                  metric <em>Retention</em> further below.
+                </li>
+              </ul>
+            </Col>
+          </Row>
         </Block>
 
-        <Block wide="">
-          <PageHeader>
-            Activations <small>where users actually do something</small>
-          </PageHeader>
+        <Block>
+          <H2>Activations</H2>
 
-          <p>
+          <InfoMedia
+            title="User Interaction Tracking"
+            image="/assets/seagull-icon.png"
+          >
+            Seagull does track the exact consecutive page views of your users by
+            listening on browser history change events.
+          </InfoMedia>
+
+          <Text>
             User who do not <em>bounce</em> but actually do something on your
-            app, like clicking through a few things are <em>ectivated</em>.
+            app, like clicking through a few things are <em>activated</em>.
             Keeping it even simpler: any "second" click counts as activation,
             meaning coming to your web app and clicking at least <em>one</em>{' '}
             internal link. This also means that your activation rate is measured
             as the acquired traffic that doesn't bounce.
-          </p>
-
-          <p>
-            Seagull will handle this automatically for you by listening on
-            browser history change events.
-          </p>
+          </Text>
         </Block>
 
-        <Block wide="">
-          <PageHeader>
-            Retentions <small>when users come back</small>
-          </PageHeader>
+        <Block>
+          <H2>Retentions</H2>
 
-          <p>
+          <InfoMedia
+            title="Advanced User Session Management"
+            image="/assets/seagull-icon.png"
+          >
+            Seagull does identify users across sessions by storing an UUID in
+            the localStorage of the Browser. Every visit after the first one
+            counts as retention event.
+          </InfoMedia>
+
+          <Text>
             Retention rate is the the rate of users that come back after the
             first visit (and how often).
-          </p>
-          <p>
-            Seagull will handle this automatically for you by inspecting the
-            hidden session initiated on the first visit.
-          </p>
+          </Text>
         </Block>
 
-        <Block wide="">
-          <PageHeader>
-            Referrals <small>when users recommend your app</small>
-          </PageHeader>
+        <Block>
+          <H2>Referrals</H2>
 
           <p>
             Referral rate is the rate of users who recommend ("share") your app
@@ -228,10 +234,8 @@ export default class Architecture extends Page<{}, {}> {
           <CodeSnippet code={codeTrackReferral} />
         </Block>
 
-        <Block wide="">
-          <PageHeader>
-            Revenue <small>when users finally do what you want</small>
-          </PageHeader>
+        <Block>
+          <H2>Revenue</H2>
 
           <p>
             This metric is highly individual to the kind of product you're
@@ -250,10 +254,8 @@ export default class Architecture extends Page<{}, {}> {
           </p>
         </Block>
 
-        <Block wide="">
-          <PageHeader>
-            Monitoring in Realtime <small>via Google Analytics</small>
-          </PageHeader>
+        <Block>
+          <H2>Monitoring in Realtime</H2>
 
           <p>
             Seagull does track everything it can to your GA account, so you have
@@ -277,10 +279,8 @@ export default class Architecture extends Page<{}, {}> {
           </p>
         </Block>
 
-        <Block wide="">
-          <PageHeader>
-            Reporting Precise Data <small>with the CLI</small>
-          </PageHeader>
+        <Block>
+          <H2>Reporting Precise Data</H2>
 
           <p>
             The tracking data in the backend can be inspected manually in server
