@@ -300,19 +300,34 @@ export default class Architecture extends Page<{}, {}> {
         <Block>
           <H2>Referral</H2>
 
-          <p>
-            Referral rate is the rate of users who recommend ("share") your app
-            to other users via social networks or messengers (and how many
-            acquisitons occur per share).
-          </p>
-          <p>
-            Seagull <strong>will not</strong> measure this rate automatically
-            for now, since this is highly individual per app and non-trivial to
-            measure without manual assistance. However, you can just invoke the
-            following:
-          </p>
-
-          <CodeSnippet code={codeTrackReferral} />
+          <Row>
+            <Col xs={12} md={6}>
+              <img
+                src="/assets/content/social-media.jpg"
+                style={{ maxWidth: '100%' }}
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <Text>
+                Referral rate is the rate of users who recommend ("share") your
+                app to other users via social networks or messengers (and how
+                many acquisitons occur per share).
+              </Text>
+              <Text>
+                Seagull currently <strong>will not</strong> measure this rate
+                automatically for now, since this is highly individual per app
+                and non-trivial to measure without manual assistance. However,
+                you can just invoke the following:
+              </Text>
+              <CodeSnippet code={codeTrackReferral} />
+              <Text>
+                The most important thing is having content worth sharing in the
+                first place. Strictly speaking: you need web pages with
+                optimized metadata and actually interesting things your users
+                might share with their friends.
+              </Text>
+            </Col>
+          </Row>
         </Block>
 
         <Block>
