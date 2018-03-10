@@ -74,16 +74,14 @@ export default class HelloPage extends Page<{}, {}> {
             <Col xs={12} md={4}>
               <H3>Build.</H3>
               <Text>
-                The Seagull Framework combines the most powerful and popular web
-                development options into one nifty package. Hit the ground
-                running immediately with preconfigured React.js and deploy to
-                the AWS Cloud within minutes.
+                The Seagull Framework builds on top of the most powerful and
+                popular web development options. Hit the ground running with
+                preconfigured React.js and deploy to the AWS Cloud within
+                minutes. <Link to="/build">read more &raquo;</Link>
               </Text>
             </Col>
             <Col xs={12} md={4}>
-              <Link to="/measure">
-                <H3>Measure.</H3>
-              </Link>
+              <H3>Measure.</H3>
               <Text>
                 Enable analytics for your app and seagull will track user
                 interactions to Google Analytics (realtime dashboards) and it's

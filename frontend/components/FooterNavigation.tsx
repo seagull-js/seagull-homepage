@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Col, Grid, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 export default () => (
@@ -13,10 +13,7 @@ export default () => (
             </h4>
             <ul>
               <li>
-                <Link to={'/quickstart'}>Quickstart</Link>
-              </li>
-              <li>
-                <Link to={'/architecture'}>Architecture</Link>
+                <Link to={'/build'}>Build</Link>
               </li>
               <li>
                 <Link to={'/measure'}>Measure</Link>
