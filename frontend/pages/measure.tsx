@@ -25,7 +25,7 @@ export default class Architecture extends Page<{}, {}> {
   /**
    * the url path this page will be mounted on
    */
-  path: string = '/analytics'
+  path: string = '/measure'
 
   /**
    * outputs the HTML of this Page
@@ -33,7 +33,11 @@ export default class Architecture extends Page<{}, {}> {
   render() {
     return (
       <PageWrapper>
-        <Meta title="Analytics | Seagull" />
+        <Meta
+          title="Measure | The Seagull Framework"
+          description="Data Driven Development: Start measuring user interactions and conversion rates
+              for your seagull app. "
+        />
 
         <div
           style={{
@@ -44,7 +48,7 @@ export default class Architecture extends Page<{}, {}> {
           }}
         >
           <Block>
-            <H1 inverse>Analytics</H1>
+            <H1 inverse>Measure</H1>
             <Text inverse lead>
               Instantly start measuring user interactions and conversion rates
               for your app. Seagull has <strong>Pirate Metrics</strong> built

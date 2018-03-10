@@ -89,7 +89,8 @@ export default class HelloPage extends Page<{}, {}> {
                 Enable analytics for your app and seagull will automatically
                 track user interactions to Google Analytics (realtime
                 dashboards) and it's own backend (exact historical data). Pirate
-                Metrics are already implemented, too.
+                Metrics are already implemented, too.{' '}
+                <Link to="/measure">read more</Link>
               </Text>
 
               <H3>Learn.</H3>

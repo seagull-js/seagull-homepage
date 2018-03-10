@@ -19,7 +19,7 @@ export default () => (
                 <Link to={'/architecture'}>Architecture</Link>
               </li>
               <li>
-                <Link to={'/analytics'}>Analytics</Link>
+                <Link to={'/measure'}>Measure</Link>
               </li>
             </ul>
           </Col>
