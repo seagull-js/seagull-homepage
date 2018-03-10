@@ -157,7 +157,7 @@ export default class Architecture extends Page<{}, {}> {
                   <strong>Social</strong>: people follow recommendations of
                   other people they might know or follow, clicking links on
                   social networks or messengers. Optimizing this traffic origin
-                  is an art called <em>Branding</em>.
+                  is an art called <em>Content Marketing</em>.
                 </li>
                 <li>
                   <strong>Paid</strong>: sidetrack people who are looking for
@@ -167,10 +167,10 @@ export default class Architecture extends Page<{}, {}> {
                   to your application in cash.
                 </li>
                 <li>
-                  <strong>Direct</strong>: aside from very strong brands, this
-                  traffic only comes through retention from users who have
-                  already been on your web app. This is a topic of the dedicated
-                  metric <em>Retention</em> further below.
+                  <strong>Direct</strong>: People in this traffic category have
+                  been on the website before or heard from your app via
+                  mouth-to-mouth. High rates of direct traffic are the result of{' '}
+                  <em>Brand Awareness</em> and <em>high retention rates</em>.
                 </li>
               </ul>
             </Col>
@@ -185,17 +185,40 @@ export default class Architecture extends Page<{}, {}> {
             image="/assets/seagull-icon.png"
           >
             Seagull does track the exact consecutive page views of your users by
-            listening on browser history change events.
+            listening on browser history change events. Users who do a click on
+            any second page within a session are tracked as "activated".
           </InfoMedia>
 
-          <Text>
-            User who do not <em>bounce</em> but actually do something on your
-            app, like clicking through a few things are <em>activated</em>.
-            Keeping it even simpler: any "second" click counts as activation,
-            meaning coming to your web app and clicking at least <em>one</em>{' '}
-            internal link. This also means that your activation rate is measured
-            as the acquired traffic that doesn't bounce.
-          </Text>
+          <Row>
+            <Col xs={12} md={6}>
+              <div style={{ textAlign: 'center' }}>
+                <img
+                  src="/assets/content/website-ux.jpg"
+                  style={{ maxWidth: '100%', maxHeight: 300 }}
+                />
+              </div>
+            </Col>
+            <Col xs={12} md={6}>
+              <Text lead>Give users what they look for</Text>
+              <Text>
+                User who do not <em>bounce</em> but actually do something on
+                your app, like clicking through a few things are{' '}
+                <em>activated</em>. Keeping it even simpler: any "second" click
+                counts as activation, meaning coming to your web app and
+                clicking at least <em>one</em> internal link. This also means
+                that your activation rate is measured as the acquired traffic
+                that doesn't bounce.
+              </Text>
+
+              <Text>
+                Increasing the user activation rates translates into optimizing
+                the actual user experience (UX). Strictly speaking, aim for a
+                low complexity, high accessability and make your point short and
+                clear. Mostly you only have around 5 seconds to convince the
+                user not to bounce immediately, <em>page load time included</em>.
+              </Text>
+            </Col>
+          </Row>
         </Block>
 
         <Block>
@@ -207,31 +230,14 @@ export default class Architecture extends Page<{}, {}> {
           >
             Seagull does identify users across sessions by storing an UUID in
             the localStorage of the Browser. Every visit after the first one
-            counts as retention event.
+            counts as retention event. This way, real customer journeys can be
+            reconstructed instead of often meaningless session-based guessing.
           </InfoMedia>
 
           <Text>
             Retention rate is the the rate of users that come back after the
             first visit (and how often).
           </Text>
-        </Block>
-
-        <Block>
-          <H2>Referrals</H2>
-
-          <p>
-            Referral rate is the rate of users who recommend ("share") your app
-            to other users via social networks or messengers (and how many
-            acquisitons occur per share).
-          </p>
-          <p>
-            Seagull <strong>will not</strong> measure this rate automatically
-            for now, since this is highly individual per app and non-trivial to
-            measure without manual assistance. However, you can just invoke the
-            following:
-          </p>
-
-          <CodeSnippet code={codeTrackReferral} />
         </Block>
 
         <Block>
@@ -252,6 +258,24 @@ export default class Architecture extends Page<{}, {}> {
             because of the well-defined structure of the data object, reports
             can be derived easily.
           </p>
+        </Block>
+
+        <Block>
+          <H2>Referral</H2>
+
+          <p>
+            Referral rate is the rate of users who recommend ("share") your app
+            to other users via social networks or messengers (and how many
+            acquisitons occur per share).
+          </p>
+          <p>
+            Seagull <strong>will not</strong> measure this rate automatically
+            for now, since this is highly individual per app and non-trivial to
+            measure without manual assistance. However, you can just invoke the
+            following:
+          </p>
+
+          <CodeSnippet code={codeTrackReferral} />
         </Block>
 
         <Block>
