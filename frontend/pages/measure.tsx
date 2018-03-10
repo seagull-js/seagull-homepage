@@ -95,12 +95,10 @@ export default class Architecture extends Page<{}, {}> {
               </Text>
             </Col>
             <Col xs={12} md={6}>
-              <div style={{ textAlign: 'center' }}>
-                <img
-                  src="/assets/content/pirate-metrics.png"
-                  style={{ maxWidth: '100%', maxHeight: 300 }}
-                />
-              </div>
+              <img
+                src="/assets/content/pirate-metrics.png"
+                style={{ maxWidth: '100%' }}
+              />
             </Col>
           </Row>
         </Block>
@@ -141,12 +139,10 @@ export default class Architecture extends Page<{}, {}> {
 
           <Row>
             <Col xs={12} sm={6}>
-              <div style={{ textAlign: 'center' }}>
-                <img
-                  src="/assets/content/traffic-sources.png"
-                  style={{ maxWidth: '100%', maxHeight: 300 }}
-                />
-              </div>
+              <img
+                src="/assets/content/traffic-sources.png"
+                style={{ maxWidth: '100%' }}
+              />
             </Col>
             <Col xs={12} sm={6}>
               <Text lead>Start with getting as much traffic as possible:</Text>
@@ -195,10 +191,10 @@ export default class Architecture extends Page<{}, {}> {
 
           <Row>
             <Col xs={12} md={6}>
-              <div style={{ textAlign: 'center' }}>
+              <div>
                 <img
                   src="/assets/content/website-ux.jpg"
-                  style={{ maxWidth: '100%', maxHeight: 300 }}
+                  style={{ maxWidth: '100%' }}
                 />
               </div>
             </Col>
@@ -238,30 +234,67 @@ export default class Architecture extends Page<{}, {}> {
             reconstructed instead of often meaningless session-based guessing.
           </InfoMedia>
 
-          <Text>
-            Retention rate is the the rate of users that come back after the
-            first visit (and how often).
-          </Text>
+          <Row>
+            <Col xs={12} md={6}>
+              <img
+                src="/assets/content/customer-churn.jpg"
+                style={{ maxWidth: '100%' }}
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <Text lead>Keep your users</Text>
+              <Text>
+                Retention rate is the the rate of users that come back after the
+                first visit (and how often). Users that don't come back are{' '}
+                <em>churning</em>. Your goal here is to minimize the churn rates
+                and to get users to come back frequently and often.
+              </Text>
+              <Text>
+                It is very costly to acquire new users to your app, so you
+                really want to keep them. Generating revenue from retention
+                users is comparably cheap and easy. High retention rates also is
+                the core for slowly builing brand awareness, which then leads to
+                more user acquisitions{' '}
+                <em>while keeping the users you already have</em>.
+              </Text>
+            </Col>
+          </Row>
         </Block>
 
         <Block>
           <H2>Revenue</H2>
 
-          <p>
-            This metric is highly individual to the kind of product you're
-            building, and not everyone optimizes for something money-related at
-            all. But what you <em>do</em> have in any case is a transaction of
-            any kind. Seagull provides an easy tracking helper to trigger the
-            event with data:
-          </p>
+          <Row>
+            <Col xs={12} md={6}>
+              <img
+                src="/assets/content/website-monetization.jpg"
+                style={{ maxWidth: '100%' }}
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <Text lead>Turn a profit</Text>
+              <Text>
+                This metric is highly individual to the kind of product you're
+                building, and not everyone optimizes for something money-related
+                at all. But what you <em>do</em> have in any case is a
+                transaction of any kind. Seagull provides an easy tracking
+                helper to trigger the event with data:
+              </Text>
 
-          <CodeSnippet code={codeTrackRevenue} />
+              <CodeSnippet code={codeTrackRevenue} />
 
-          <p>
-            The interface definition will aid you to achieve data cleanness, and
-            because of the well-defined structure of the data object, reports
-            can be derived easily.
-          </p>
+              <Text>
+                The interface definition will aid you to achieve data cleanness,
+                and because of the well-defined structure of the data object,
+                reports can be derived easily.
+              </Text>
+              <Text>
+                Caution: traditional display advertising (banners, popups,
+                textboxes) is a soon-dying monetization strategy, so consider
+                something more substantial for your app.
+              </Text>
+            </Col>
+          </Row>
         </Block>
 
         <Block>
