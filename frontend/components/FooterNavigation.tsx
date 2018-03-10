@@ -21,6 +21,9 @@ export default () => (
               <li>
                 <Link to={'/measure'}>Measure</Link>
               </li>
+              <li>
+                <Link to={'/learn'}>Learn</Link>
+              </li>
             </ul>
           </Col>
 

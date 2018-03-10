@@ -97,7 +97,8 @@ export default class HelloPage extends Page<{}, {}> {
               <Text>
                 Generate daily/weekly/monthly reports from your app with
                 actionable metrics and results. There might even be automatic
-                hypothesis management in the future.
+                hypothesis management in the future.{' '}
+                <Link to="/learn">read more</Link>
               </Text>
             </Col>
           </Row>
