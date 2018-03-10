@@ -25,29 +25,37 @@ export default class HelloPage extends Page<{}, {}> {
             <img src="/assets/seagull-logo.png" style={eyeCatcherStyle} />
           </div>
         </Block>
-
-        <Block inverse>
-          <H1 inverse>Launch your idea today!</H1>
-          <Text inverse lead>
-            The Seagull Framework empowers <em>you</em> to build sophisticated
-            web applications and deploy it straight to your highly scalable
-            serverless infrastructure. With feedback loops included, it is the
-            ideal tool for LEAN software development.
-          </Text>
-          <Text inverse>
-            <Link to={'/quickstart'} style={{ color: 'white' }}>
-              Quickstart
-            </Link>
-            &nbsp;&bull;&nbsp;
-            <Link to={'/'} style={{ color: 'white' }}>
-              Guides
-            </Link>
-            &nbsp;&bull;&nbsp;
-            <Link to={'/'} style={{ color: 'white' }}>
-              Community
-            </Link>
-          </Text>
-        </Block>
+        <div
+          style={{
+            background: 'url("/assets/content/software-building.jpg")',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+          }}
+        >
+          <Block>
+            <H1 inverse>Launch your idea today!</H1>
+            <Text inverse lead>
+              The Seagull Framework empowers <em>you</em> to build sophisticated
+              web applications and deploy it straight to your highly scalable
+              serverless infrastructure. With feedback loops included, it is the
+              ideal tool for LEAN software development.
+            </Text>
+            <Text inverse>
+              <Link to={'/quickstart'} style={{ color: 'white' }}>
+                Quickstart
+              </Link>
+              &nbsp;&bull;&nbsp;
+              <Link to={'/'} style={{ color: 'white' }}>
+                Guides
+              </Link>
+              &nbsp;&bull;&nbsp;
+              <Link to={'/'} style={{ color: 'white' }}>
+                Community
+              </Link>
+            </Text>
+          </Block>
+        </div>
 
         <Block>
           <Alert title="This is a pre-alpha framework!">
