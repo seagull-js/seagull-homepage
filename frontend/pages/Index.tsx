@@ -64,18 +64,26 @@ export default class HelloPage extends Page<{}, {}> {
           </Alert>
 
           <H2>Overview</H2>
+
           <Text lead>
             TL;DR: it is <strong>React.js</strong> and{' '}
             <strong>Typescript Code</strong> running on{' '}
             <strong>AWS Lambda</strong> and deployed via{' '}
-            <strong>Serverless</strong>.
+            <strong>Serverless</strong>. The framework is designed for{' '}
+            <strong>LEAN product development</strong> and especially tailored
+            for <strong>experienced developers</strong> and{' '}
+            <strong>serial solopreneurs</strong>.
           </Text>
 
-          <Row className="show-grid" style={{ margin: '20px 0' }}>
-            <Col xs={12} sm={6} md={4}>
-              <img src="/assets/lean-circle.png" style={{ width: '100%' }} />
-            </Col>
-            <Col xs={12} sm={6} md={8}>
+          <div style={{ textAlign: 'center' }}>
+            <img
+              src="/assets/content/lean-circle.svg"
+              style={{ maxHeight: 300, maxWidth: '100%' }}
+            />
+          </div>
+
+          <Row>
+            <Col xs={12} md={4}>
               <H3>Build.</H3>
               <Text>
                 The Seagull Framework combines the most powerful and popular web
@@ -83,22 +91,27 @@ export default class HelloPage extends Page<{}, {}> {
                 running immediately with preconfigured React.js and deploy to
                 the AWS Cloud within minutes.
               </Text>
-
-              <H3>Measure.</H3>
+            </Col>
+            <Col xs={12} md={4}>
+              <Link to="/measure">
+                <H3>Measure.</H3>
+              </Link>
               <Text>
-                Enable analytics for your app and seagull will automatically
-                track user interactions to Google Analytics (realtime
-                dashboards) and it's own backend (exact historical data). Pirate
-                Metrics are already implemented, too.{' '}
-                <Link to="/measure">read more</Link>
+                Enable analytics for your app and seagull will track user
+                interactions to Google Analytics (realtime dashboards) and it's
+                own backend (exact historical data). Pirate Metrics are already
+                implemented, too. <Link to="/measure">read more &raquo;</Link>
               </Text>
-
-              <H3>Learn.</H3>
+            </Col>
+            <Col xs={12} md={4}>
+              <Link to="/measure">
+                <H3>Learn.</H3>
+              </Link>
               <Text>
                 Generate daily/weekly/monthly reports from your app with
                 actionable metrics and results. There might even be automatic
                 hypothesis management in the future.{' '}
-                <Link to="/learn">read more</Link>
+                <Link to="/learn">read more &raquo;</Link>
               </Text>
             </Col>
           </Row>

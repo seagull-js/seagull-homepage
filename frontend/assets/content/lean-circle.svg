@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="793px" height="351px" viewBox="0 0 793 351" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>LeanStartup</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LeanStartup">
+            <g id="Group" transform="translate(44.000000, 111.000000)">
+                <polygon id="Polygon" fill="#F05E2C" points="72.7461339 0 145.492268 42 145.492268 126 72.7461339 168 3.01980663e-14 126 -1.77635684e-14 42"></polygon>
+                <text id="BUILD" font-family="FiraSans-Medium, Fira Sans" font-size="24" font-weight="400" letter-spacing="0.787500024" fill="#FFFFFF">
+                    <tspan x="38.4272499" y="89">BUILD</tspan>
+                </text>
+            </g>
+            <g id="Group-2" transform="translate(322.000000, 111.000000)">
+                <polygon id="Polygon" fill="#477AA0" points="73 0.5 145.746134 42.5 145.746134 126.5 73 168.5 0.253866082 126.5 0.253866082 42.5"></polygon>
+                <text id="MEASURE" font-family="FiraSans-Medium, Fira Sans" font-size="24" font-weight="400" letter-spacing="0.787500024" fill="#FFFFFF">
+                    <tspan x="18.2197499" y="91.3807991">MEASURE</tspan>
+                </text>
+            </g>
+            <g id="Group-3" transform="translate(600.000000, 111.000000)">
+                <polygon id="Polygon" fill="#AACC42" points="72.7461339 0 145.492268 42 145.492268 126 72.7461339 168 1.29674049e-13 126 8.17124146e-14 42"></polygon>
+                <text id="LEARN" font-family="FiraSans-Medium, Fira Sans" font-size="24" font-weight="400" letter-spacing="0.787500024" fill="#FFFFFF">
+                    <tspan x="36.2072499" y="92">LEARN</tspan>
+                </text>
+            </g>
+            <g id="Group-4" transform="translate(194.000000, 184.000000)">
+                <path d="M0.5,11 L115.5,11" id="Line" stroke="#979797" stroke-width="6" stroke-linecap="square"></path>
+                <polygon id="Triangle-2" fill="#979797" points="128 11 110 22 110 0"></polygon>
+            </g>
+            <g id="Group-4" transform="translate(472.000000, 184.000000)">
+                <path d="M0.5,11 L115.5,11" id="Line" stroke="#979797" stroke-width="6" stroke-linecap="square"></path>
+                <polygon id="Triangle-2" fill="#979797" points="128 11 110 22 110 0"></polygon>
+            </g>
+            <polygon id="Triangle-2" fill="#979797" transform="translate(163.500000, 121.000000) rotate(27.000000) translate(-163.500000, -121.000000) " points="174 121 153 132 153 110"></polygon>
+            <path d="M156.921875,122 C222.140775,73.9427083 301.166966,49.9140625 394.000449,49.9140625 C486.833932,49.9140625 566.233522,73.9427083 632.199219,122" id="Line-2" stroke="#979797" stroke-width="6" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>
