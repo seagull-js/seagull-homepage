@@ -41,19 +41,7 @@ export default class HelloPage extends Page<{}, {}> {
               serverless infrastructure. With feedback loops included, it is the
               ideal tool for LEAN software development.
             </Text>
-            <Text inverse>
-              <Link to={'/quickstart'} style={{ color: 'white' }}>
-                Quickstart
-              </Link>
-              &nbsp;&bull;&nbsp;
-              <Link to={'/'} style={{ color: 'white' }}>
-                Guides
-              </Link>
-              &nbsp;&bull;&nbsp;
-              <Link to={'/'} style={{ color: 'white' }}>
-                Community
-              </Link>
-            </Text>
+            <br />
           </Block>
         </div>
 
@@ -118,70 +106,7 @@ export default class HelloPage extends Page<{}, {}> {
         </Block>
 
         <Block inverse>
-          <H2 inverse>Features</H2>
-          <Text inverse lead>
-            Seagull is a Featherweight Zero-Config Typesafe Isomorphic Cloud
-            Framework. If you're curious, this is what it means:
-          </Text>
-
-          <Row className="show-grid">
-            <Col xs={12} sm={6} md={4}>
-              <DefaultPanel title="Featherweight">
-                Enjoy a <strong>tiny codebase</strong> for your app as well as{' '}
-                <strong>lightweight deployment bundles</strong> and a{' '}
-                <strong>small learning curve</strong>.
-              </DefaultPanel>
-            </Col>
-
-            <Col xs={12} sm={6} md={4}>
-              <DefaultPanel title="Zero-Config">
-                <strong>No configuration hell</strong>, thanks to a{' '}
-                <strong>dedicated CLI tool</strong> which manages the
-                development workflows in the spirit of{' '}
-                <strong>Convention over Configuration</strong>.
-              </DefaultPanel>
-            </Col>
-
-            <Col xs={12} sm={6} md={4}>
-              <DefaultPanel title="Typesafe">
-                Seagull leverages <strong>Typescript</strong> extensively to
-                make <strong>features discoverable</strong> and introduce a{' '}
-                <strong>safety layer</strong> back into fullstack web
-                development.
-              </DefaultPanel>
-            </Col>
-
-            <Col xs={12} sm={6} md={4}>
-              <DefaultPanel title="Isomorphic">
-                Built ontop of the <strong>Javascript ecosystem</strong> and
-                embracing <strong>write once - run everywhere</strong>,
-                extending the boundaries of{' '}
-                <strong>don't repeat yourself</strong>.
-              </DefaultPanel>
-            </Col>
-
-            <Col xs={12} sm={6} md={4}>
-              <DefaultPanel title="Cloud">
-                Your deployed app will run on a{' '}
-                <strong>clean serverless architecture</strong>, resulting in{' '}
-                <strong>minimal maintenance costs</strong> and{' '}
-                <strong>maximal scalability</strong>.
-              </DefaultPanel>
-            </Col>
-
-            <Col xs={12} sm={6} md={4}>
-              <DefaultPanel title="Framework">
-                Seagull comes with <strong>batteries included</strong> for
-                building interactive <strong>fullstack web apps</strong>,
-                including features like{' '}
-                <strong>ORM, SSR, caching and CDN</strong>.
-              </DefaultPanel>
-            </Col>
-          </Row>
-        </Block>
-
-        <Block>
-          <H2>What's inside?</H2>
+          <H2 inverse>What's inside?</H2>
 
           <InfoMedia
             title="Node.js"

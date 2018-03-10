@@ -1,3 +1,4 @@
+import { Text } from '@seagull/ui'
 import * as React from 'react'
 import { Media, Panel } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
@@ -13,7 +14,9 @@ const withLink = ({ image, title, link, children }) => (
       <Link to={link} target="_blank">
         <Media.Heading>{title}</Media.Heading>
       </Link>
-      <div>{children}</div>
+      <div style={{ color: 'black' }}>
+        <Text>{children}</Text>
+      </div>
     </Media.Body>
   </Media>
 )
@@ -25,7 +28,9 @@ const withoutLink = ({ image, title, children }) => (
     </Media.Left>
     <Media.Body>
       <Media.Heading>{title}</Media.Heading>
-      <div>{children}</div>
+      <div style={{ color: 'black' }}>
+        <Text>{children}</Text>
+      </div>
     </Media.Body>
   </Media>
 )
